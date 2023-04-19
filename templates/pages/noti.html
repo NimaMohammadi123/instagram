@@ -1,0 +1,11 @@
+<h1>Notifications</h1>
+<div>
+    {% for action in actions %}
+      <img src="{{action.user.photo.url}}" alt="" style="border-radius:50% ; height:80px;"> {{action.user}} is {{action.act}} :
+      {% if action.target %}
+         {{action.target}}
+         <img src="{{post.image.url}}" alt="">
+      {% endif %}
+      <hr/>
+    {% endfor %}
+</div>

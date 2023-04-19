@@ -1,0 +1,15 @@
+<div>
+    <h1>Search</h1>
+    <hr>
+    <form action="" method="GET">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Search</button>
+    </form>
+    <hr>
+    {% if query %}
+      {% for q in query %}
+        {{q.username}}
+      {% endfor %}
+    {% endif %}
+</div>

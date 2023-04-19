@@ -1,0 +1,9 @@
+<h1>Post Save</h1>
+
+<div>
+    {% for save in post %}
+      <a href="{% url 'posts:detail_post' id=save.id slug=save.slug %}">
+        <img src="{{save.image.url}}" alt="" height="200" weight="'200">
+      </a>
+    {% endfor %}
+</div>
